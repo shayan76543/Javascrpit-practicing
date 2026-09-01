@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:black; color:white">
+    <h1>Hello, World!</h1>
+    <ul class="languages">
+        <li>Python</li>
+    </ul>
+    <script>
+        function add_languages(languageName){
+            li=document.createElement("li")
+            li.textContent=languageName
+            document.querySelector(".languages").appendChild(li)
+        }
+        add_languages("C++")
+        function replace_languages(languageName){
+            li=document.createElement("li")
+            li.textContent=languageName
+            document.querySelector(".languages li:nth-child(2)").replaceWith(li)
+        }
+        replace_languages("Java")
+        function remove_languages(){
+            const removelang=document.querySelector("li:last-child")
+            removelang.remove()
+        }
+        remove_languages()
+    </script>
+</body>
+</html>

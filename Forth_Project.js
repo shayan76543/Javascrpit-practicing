@@ -1,4 +1,4 @@
-\let randomNumber=parseInt(Math.random()*100+1)
+let randomNumber=parseInt(Math.random()*100+1)
 const userInput= document.querySelector('#guessField');
 const submitButton=document.querySelector('#subt');
 const previousGuess=document.querySelector('.guesses');

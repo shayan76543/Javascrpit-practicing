@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeoutFunction</title>
+</head>
+<body style="background-color: black;color:white;">
+    <h1>Shayan ahmad</h1>
+    <button id="start">Start</button>
+        <button id="stop">Stop</button>
+</body>
+<script>
+    // function changeName(){
+    //     document.querySelector('h1').innerHTML="shayan ahmad awan";
+    // }
+    // const changeMe=setInterval(changeName,2000);
+    // document.querySelector('#button').addEventListener('click',function(){
+    //     clearInterval(changeMe);
+    //     console.log("event Stop")//Clear TimeInterval Function
+    // })
+    // setTimeout(changeName,2000);
+    let ChangeMe;
+    document.querySelector('#start').addEventListener('click',function(){
+        ChangeMe=setInterval(function(){
+            document.querySelector('h1').innerHTML='shayan ahmad awan';
+            console.log('hello')
+        },2000);
+    })
+    document.querySelector('#stop').addEventListener('click',function(){
+        console.log('stop')
+        clearInterval(ChangeMe)
+    })
+</script>
+</html>
